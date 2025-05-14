@@ -1,195 +1,62 @@
-📱 USSD-Based Online Ordering System Documentation
-⚡ Seamless Mobile Ordering Without Internet
-Powered by: PHP, Africa’s Talking, and MySQL
+# GROUP-12-22RP03920-22RP02034
 
-📌 STICKY OVERVIEW
-👤 Unregistered Users:
-Menu Options:
+*📱 USSD-Based Online Ordering System*
+*Developed by:* Francois & Frederic
+Tech Stack: PHP, MySQL, Africa’s Talking API
 
-1. Register: Email, Full Names, PIN, Address
+👥 *Team Contribution*
+*Name	Tasks Completed*
 
-2. Help: How to use the system
+*Francois*	index.php, sms.php, config.php (handles USSD logic, SMS delivery, and configurations)
+*Frederic*	menu.php, database.sql (manages menu flow and database structure)
 
-🏦 Default Wallet Balance: 10,000,000
+📌 Overview
+This system allows users to place and track product orders via USSD (no internet needed). It uses Africa’s Talking API to send confirmation SMS and interact with users.
 
-👨‍💼 Registered Users:
-Menu Options:
+🔧 *How to Run This Project (from GitHub)*
+Clone the Repository
+git clone https://github.com/MGFrancois123/GROUP-12-22RP03920-22RP02034.git
+*Move into the Project Directory*
+cd GROUP-12-22RP03920-22RP02034
 
-1. Place Order → Choose Product, Quantity, Confirm
+*📌 System Summary*
+*👤 Unregistered Users*
+Main Menu:
+1.*Register* (requires Email, Names, PIN, Address)
+2.*Help* (explains registration & navigation)
+🔹 Default Wallet Balance: 10,000,000
 
-2. Check Order Status → View Confirmed Orders
+*👨‍💼 Registered Users*
+Main Menu:
 
-🛍️ Order Process Flow:
-Select Category
+1.Place Order
+2.Check Order Status
 
-Choose Product
+*🛒 Order Flow*
+Choose Category → Product → Quantity
 
-Enter Quantity
+Add More or Confirm
 
-Confirm or Add More
-
-Enter 4-digit PIN
+Enter PIN
 
 Receive Confirmation (USSD + SMS)
 
-🔐 PIN Security:
-PIN required to confirm orders
-
-Invalid PIN triggers retry
-
-Only confirmed orders appear in the status
-
-📲 USSD Navigation Keys
+📲 Navigation Keys
 Key	Action
-0	Return to Main Menu
-00	Back to Previous Menu
-98	Next Page (Products/Orders)
+0	Main Menu
+00	Back
+98	Next Page (if many items)
 
-🧾 FULL DOCUMENTATION
-🔹 1. UNREGISTERED USER MENU
-When USSD code is dialed for the first time:
+*✅ PIN Security*
+4-digit PIN required to confirm
 
-markdown
+Invalid PIN → Retry
 
-Welcome to Online Ordering System  
-1. Register  
-2. Help
-1.1 Register
-Prompted inputs:
+Only confirmed orders appear in status
 
-Email
-
-Full Names
-
-PIN (4-digit)
-
-Address
-
-✅ On submission: Balance = 10,000,0000
-
-1.2 Help
-
-Instructions:
-1. Register using option 1
-2. Once registered, you can place orders, check order status, and view your cart
-3. Use 0 to return to Main Menu
-4. Use 00 to return to Previous Menu
-🔹 2. REGISTERED USER MENU
-Post registration or return visit:
-
-
-Welcome [UserName]  
-1. Place Order  
-2. Check Order Status
-
-2.1 Place Order
-
-1. New Order  
-2. Saved Order  
-0. Main Menu
-
-2.1.1 New Order
-Select Product Category:
-1. Electronics devices  
-2. Shoes  
-3. Clothes  
-00. Back  
-0. Main Menu
-Example: User selects 1 (Electronics devices)
-
-Product List Displayed:
-
-1. LENOVO-V-XX—YY  
-2. DELL-PQ-88-ZZ  
-3. SAMSUNG-S10-XX  
-98. Next Products  
-00. Back  
-0. Main Menu
-Example: User selects 1 (LENOVO-V-XX—YY)
-
-Prompt:
-
-
-Enter quantity for LENOVO-V-XX—YY:
-Post Quantity Selection:
-
-
-
-1. Place Order  
-2. Add another product from same category  
-0. Main Menu
-Order Summary Example:
-
-mathematica
-
-Your Order Summary:  
-1. LENOVO-V-XX—YY x2 = 300,000  
-Total: 300,000  
-
-1. Confirm  
-2. Cancel
-On Confirm → Prompt:
-
-
-Enter your PIN:
-✅ If valid:
-
-USSD Message:
-
-
-Thanks for using our Ordering system, you will receive a confirmation message later.
-SMS via Africa’s Talking:
-
-
-Hello [UserName],  
-Your order for:  
-- LENOVO-V-XX—YY x2 = 300,000  
-Total Paid: 300,000  
-Balance Remaining: 0  
-
-We appreciate your trust in us.  
-Delivery will be made to: [User Address]  
-Thank you!
-2.1.2 Saved Order
-Display unconfirmed items in cart:
-
-Saved Order:  
-1. LENOVO-V-XX—YY x2 = 300,000  
-Total: 300,000  
-
-1. Confirm  
-0. Main Menu
-Same confirmation and PIN flow as 2.1.1
-
-2.2 Check Order Status
-Shows only confirmed orders:
-
-Your Orders:  
-1. LENOVO-V-XX—YY x2 = 300,000 - Confirmed  
-2. DELL-PQ-88-ZZ x1 = 250,000 - Confirmed  
-
-98. Next Orders  
-0. Main Menu
-🔁 USSD NAVIGATION KEYS
-Key	Function
-0	Return to Main Menu
-00	Back to Previous Menu
-98	View Next Page
-
-🧮 DEFAULT VALUES
-Field	Value
+*🧮 Configuration*
+Setting	Value
 Balance	10,000,000
-Currency	As applicable
+Currency	Defined by system
 
-🔐 SECURITY & VALIDATION
-✅ 4-digit PIN is mandatory for confirming any order
-
-❌ On invalid PIN: user is prompted to retry
-
-✔️ Only confirmed orders appear in the Order Status section
-
-❌ CANCEL FLOW
-If user selects Cancel at confirmation:
-
-
-Thanks for using our service.
+*THANK YOU !!!*
