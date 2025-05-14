@@ -7,6 +7,7 @@ Tech Stack: PHP, MySQL, Africa’s Talking API
 👥 *Team Contribution*
 *Name	Tasks Completed*
 
+
 *Francois*	index.php, sms.php, config.php (handles USSD logic, SMS delivery, and configurations)
 *Frederic*	menu.php, database.sql (manages menu flow and database structure)
 
