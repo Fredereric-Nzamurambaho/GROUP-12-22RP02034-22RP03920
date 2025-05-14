@@ -11,6 +11,7 @@ class Menu {
     private $userData = [];
     private $defaultBalance = 10000000;
     private $currentOrder = [];
+ // Construct
 
     public function __construct($sessionId, $phoneNumber, $text) {
         $database = new Database();
