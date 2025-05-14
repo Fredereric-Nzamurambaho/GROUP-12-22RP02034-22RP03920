@@ -15,7 +15,7 @@ This system allows users to place and track product orders via USSD (no internet
 
 🔧 *How to Run This Project (from GitHub)*
 Clone the Repository
-git clone https://github.com/MGFrancois123/GROUP-12-22RP03920-22RP02034.git
+git clone https://github.com/Fredereric-Nzamurambaho/GROUP-12-22RP02034-22RP03920/tree/GROUP-12-22RP02034-22RP03920
 *Move into the Project Directory*
 cd GROUP-12-22RP03920-22RP02034
 
