@@ -26,7 +26,7 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `cart`
 --
-
+/*!40101 SET NAMES utf8mb4 */;
 CREATE TABLE `cart` (
   `id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
